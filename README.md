@@ -1,33 +1,40 @@
-🛍️ FakeStore Product Catalog
+# 🛍️ FakeStore Product Catalog
+
 A sleek, dynamic, and fully responsive E-Commerce Product Showcase application. This project fetches live commercial data asynchronously from the Fake Store API and presents it through an optimized presentation layer utilizing fluid layout handling.
 
-🚀 Live Preview
+---
+
+## 🚀 Live Preview
+
 Below is the visual interface showcasing the dynamic responsive product grid:
+
 ![Product Showcase](./images/Screenshot%202026-06-24%20112641.png)
 
-✨ Core Architecture & Features
-📡 Asynchronous Side-Effect Layer
-Utilizes streamlined React useEffect hooks paired with Async/Await paradigms to seamlessly query and resolve asynchronous JSON payloads from an external REST API gateway.
+---
 
-📱 Responsive Grid System
-Optimized with a mobile-first philosophy using Tailwind CSS grid layouts, scaling seamlessly across multiple viewport breaks:
+## ✨ Core Architecture & Features
 
-Mobile devices: grid-cols-1
+### 📡 Asynchronous Side-Effect Layer
+* Utilizes streamlined React `useEffect` hooks paired with `Async/Await` paradigms to seamlessly query and resolve asynchronous JSON payloads from an external REST API gateway.
 
-Tablets / Medium viewports: grid-cols-2
+### 📱 Responsive Grid System
+* Optimized with a mobile-first philosophy using Tailwind CSS grid layouts, scaling seamlessly across multiple viewport breaks:
+  * **Mobile devices:** 1 Column
+  * **Tablets / Medium viewports:** 2 Columns
+  * **Desktops / Ultra-wide monitors:** 4 Columns
 
-Desktops / Ultra-wide monitors: grid-cols-4
+### 🎨 Visual Integrity Protection
+* Implements multi-line content truncation (`line-clamp-1` for headings, `line-clamp-2` for bodies) combined with strict `aspect-square` container enforcement to ensure asynchronous image assets align correctly, preventing text overflow from disrupting grid proportions.
 
-🎨 Visual Integrity Protection
-Implements multi-line content truncation (line-clamp-1 for headings, line-clamp-2 for bodies) combined with strict aspect-square container enforcement to ensure asynchronous image assets align correctly, preventing text overflow from disrupting grid proportions.
+### 🕹️ Polished Micro-Interactions
+* Features flexible volumetric configuration toggles (25ml, 50ml, 100ml) using functional interactive states.
+* Floating absolute-positioned "Add to Favorites" bookmarks with direct `lucide-react` modern vectors.
 
-🕹️ Polished Micro-Interactions
-Features flexible volumetric configuration toggles (25ml, 50ml, 100ml) using functional interactive states.
+---
 
-Floating absolute-positioned "Add to Favorites" bookmarks with direct lucide-react modern vectors.
+## 📂 Structural Overview
 
-📂 Structural Overview
-Bash
+```bash
 src/
 ├── components/
 │   ├── ui/
@@ -58,15 +65,7 @@ git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 2. Dependency Resolution
 Bash
-npm install lucide-react clsx tailwind-merge
+pnpm install lucide-react clsx tailwind-merge
 3. Execution
 Bash
-npm run dev
-📊 Component API Specifications
-<Card /> Props
-Prop Name	Datatype	Purpose
-post_title	String	Maps string values directly to header text slots.
-post_body	String	Main body string descriptive data (Truncated automatically).
-post_price	Number / String	Renders computational product item pricing metrics.
-post_image	String (URL)	Absolute asset URL endpoints.
-post_rate	Number	Computes float values into decimal rating metrics.
+pnpm run dev
